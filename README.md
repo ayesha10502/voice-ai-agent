@@ -290,4 +290,12 @@ SCENARIOS: dict[str, dict[str, Any]] = {
 2. Update `FRONTEND_URL` in backend `.env` to your production domain
 3. Update the API URL in `index.html` to point to your production backend
 
+
+⚠️ Free Trial Limitation
+Vapi uses Twilio under the hood for telephony. On a Twilio free trial account, calls can only be made to verified phone number.
+This means:
+
+* ✅ Works perfectly on any verified number
+* ❌ Call ends immediately on unverified numbers.
+
 Built with ❤️ using FastAPI, Vapi, and modern web technologies.
