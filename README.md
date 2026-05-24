@@ -95,8 +95,9 @@ VAPI_API_KEY=your_vapi_api_key_here
 VAPI_PHONE_NUMBER_ID=your_phone_number_id_here
 APP_ENV=development
 APP_HOST=0.0.0.0
-APP_PORT=8000
-FRONTEND_URL=http://localhost:3000
+APP_PORT=8001
+FRONTEND_URL=http://127.0.0.1:5500
+
 ```
 
 ### Frontend Setup
@@ -106,7 +107,7 @@ The frontend is a single HTML file that can be served in multiple ways:
 **Option 1: Simple HTTP Server**
 ```bash
 cd frontend
-python -m http.server 3000
+python -m http.server 5500
 ```
 
 **Option 2: VS Code Live Server**
@@ -123,18 +124,18 @@ python -m http.server 3000
 cd backend
 venv\Scripts\activate  # Windows
 # source venv/bin/activate  # Mac/Linux
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8001
 ```
 
 2. Start the frontend (in a new terminal):
 ```bash
 cd frontend
-python -m http.server 3000
+python -m http.server 5500
 ```
 
 3. Open your browser and navigate to:
-   - Frontend: `http://localhost:3000`
-   - API Docs: `http://localhost:8000/docs`
+   - Frontend: `http://localhost:5500`
+   - API Docs: `http://localhost:8001/docs`
 
 ## 📖 Usage
 
